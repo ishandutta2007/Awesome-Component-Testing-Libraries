@@ -50,9 +50,9 @@ The global automated software testing and visual UI regression sector represents
 
 ## 🐙 Open-Source GitHub Projects
 
-The premier open-source libraries for component testing, unit isolation, accessibility audits, and real-browser rendering, sorted by community adoption (GitHub star counts descending):
+The premier open-source libraries for component testing, unit isolation, accessibility audits, and real-browser rendering, sorted by community adoption (GitHub Stars_Counts descending):
 
-| Repository 📦 | Stars ⭐ | Primary Focus 🎯 | License 📜 | Description 📝 |
+| Repository 📦 | GitHub_Stars ⭐ | Primary Focus 🎯 | License 📜 | Description 📝 |
 | :--- | :---: | :--- | :---: | :--- |
 | **[Playwright](https://github.com/microsoft/playwright)** | [![Stars](https://img.shields.io/github/stars/microsoft/playwright?style=social&color=white)](https://github.com/microsoft/playwright/stargazers) | Real-Browser Component & E2E Testing | Apache-2.0 | High-velocity component testing for React, Vue, Svelte, and solid components in Chromium, Firefox, and WebKit with native parallel processes and timeline traces. |
 | **[Storybook](https://github.com/storybookjs/storybook)** | [![Stars](https://img.shields.io/github/stars/storybookjs/storybook?style=social&color=white)](https://github.com/storybookjs/storybook/stargazers) | Isolated Component Workshop & Testing | MIT | Industry-standard frontend workshop for developing UI components in isolation, featuring interaction tests via `play` functions and portable stories. |
