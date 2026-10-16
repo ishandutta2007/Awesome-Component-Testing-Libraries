@@ -1,219 +1,132 @@
-# Awesome-Component-Testing-Libraries
+# Awesome Component Testing Libraries 🧪✨
 
-## Top Component Testing Libraries Ecosystem
+<div align="center">
 
+<img src="./assets/banner.svg" alt="Awesome Component Testing Libraries Banner" width="100%" />
 
+<br/><br/>
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
+<a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+<a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 
-*Focused on User-Centric Assertions, Real-Browser Testing & Accessibility Verification*  
+<p align="center">
+  <b>A curated list of delightfully modern Component Testing Libraries, Real-Browser Harnesses, Visual Regression Testing Tools, and Accessibility Checkers.</b><br/>
+  <i>Engineered for frontend developers, QA architects, and UI engineers building resilient design systems and production web apps.</i>
+</p>
 
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Component Testing Libraries**. These tools enable developers to verify that UI components work correctly—from isolated unit tests with user-centric assertions to real-browser testing that catches CSS and layout bugs jsdom cannot see.
-
-
-
-**Examples** include React Testing Library, Cypress, Playwright, Storybook, Vitest, Jest, WebdriverIO, and TestCafe (the category leaders).
-
-
-
-**Open-source emphasis**: This section is heavily expanded with every major active project for component testing, real-browser verification, and accessibility validation—ideal for frontend developers, QA engineers, and organizations seeking transparent, vendor-independent testing infrastructure.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Chromatic](https://www.chromatic.com/)**  
-
-  **Visual testing and UI review for Storybook** — cloud service that captures snapshots of every story, detects pixel changes, and requires approval for intentional changes. **Free tier for open source**; paid plans for private projects. **The most widely used visual regression platform** for component libraries.
-
-
-
-- **[Percy (BrowserStack)](https://percy.io/)**  
-
-  **Visual testing and review platform** — integrates with Storybook, Cypress, and Playwright. Captures DOM snapshots, renders them across browsers, and highlights visual diffs. **The most cross-framework visual testing service**.
-
-
-
-- **[Applitools](https://applitools.com/)**  
-
-  **Visual AI testing platform** — uses AI to detect meaningful visual changes while ignoring rendering noise. **The enterprise standard** for visual testing at scale.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[React Testing Library](https://github.com/testing-library/react-testing-library)**  
-
-  **Simple and complete React DOM testing utilities** (MIT) . **The community standard for React component testing** — **operates on a simple principle: test what the user sees and does** . **Discourages accessing internal state** — queries by text content, accessibility roles, and labels ensure tests verify actual user experience . **The philosophical shift**: Enzyme encouraged testing implementation details (state variables, class names); React Testing Library tests user behavior . **The reference implementation for user-centric component testing** .
-
-
-
-- **[Testing Library (family)](https://github.com/testing-library)**  
-
-  **Simple and complete testing utilities for React, Vue, Angular, Svelte, and more** (MIT) . **Framework-specific implementations sharing the same core philosophy** — **accessibility-first queries** (`getByRole`, `getByLabelText`) that match how assistive technology finds elements . **Query hierarchy**: `getByRole` (best) → `getByLabelText` → `getByText` → `getByTestId` (last resort) . **Three query variants**: `getBy*` (throws if absent), `queryBy*` (returns null), `findBy*` (async with retry) .
-
-
-
-- **[user-event](https://github.com/testing-library/user-event)**  
-
-  **Fire events the same way the user does** (MIT) . **The companion to Testing Library for realistic interactions** — **fires `pointerdown`, `mousedown`, `focus`, `click` in order, with realistic timing** . **Always `await` user-event calls** (v14 is async) . **Simulates real browser sequence** — prefer over `fireEvent` which dispatches a single synthetic event .
-
-
-
-- **[jest-dom](https://github.com/testing-library/jest-dom)**  
-
-  **Custom Jest matchers for asserting on DOM nodes** (MIT) . **Extends Jest's `expect` with semantic matchers** — `toBeDisabled()`, `toBeVisible()`, `toHaveClass()`, `toBeInTheDocument()` . **Makes test intent obvious and code shorter** — replaces verbose DOM property checks with readable assertions .
-
-
-
-- **[Cypress Component Testing](https://github.com/cypress-io/cypress)**  
-
-  **Component testing in a real browser** (MIT) . **The most mature real-browser component testing tool** — **runs components in Chrome, Firefox, or Electron** with real CSS, real layout, and real stacking contexts . **`cy.mount()` replaces `cy.visit()`** — pass JSX directly, no server needed . **Catches CSS-dependent bugs jsdom misses** — z-index conflicts, overflow issues, viewport-dependent layout . **Strong for testing prop combinations** including stress tests with 100+ items . **Limitation**: serial specs locally; parallelism requires CI sharding .
-
-
-
-- **[Playwright Component Testing](https://github.com/microsoft/playwright)**  
-
-  **Component testing for React, Vue, and Svelte** (Apache-2.0) . **The most powerful real-browser testing approach** — **parallel across worker processes by default**, so large suites finish faster . **Trace viewer** for post-hoc debugging — timeline, DOM snapshots, network, and console for each test . **Async/await with web-first assertions** — explicit and composes naturally with JavaScript control flow . **The best choice for teams already using Playwright for E2E** .
-
-
-
-- **[Vitest](https://github.com/vitest-dev/vitest)**  
-
-  **Next generation testing framework powered by Vite** (MIT) . **The fastest component testing runner** — **Vite-native with HMR support**, compatible with Jest API, and built-in coverage . **Storybook 9 partnership** — **Vitest ships the fastest test runner available**, enabling Storybook interaction tests across all stories with a single click . **The emerging standard for Vite-based projects** .
-
-
-
-- **[Jest](https://github.com/jestjs/jest)**  
-
-  **Delightful JavaScript Testing Framework** (MIT) . **The most widely used JavaScript test runner** — **snapshot testing** for component regression, **jsdom** for DOM simulation, and **extensive mocking capabilities** . **The foundation for most React component tests** . **Note**: Snapshot tests on entire rendered components produce huge `.snap` files nobody reviews — prefer assertions on specific behavior .
-
-
-
-- **[Storybook](https://github.com/storybookjs/storybook)**  
-
-  **Frontend workshop for building UI components in isolation** (MIT) . **The most widely adopted component workshop** — **stories express every component variation**, and adding tests to those variations is easy . **`play` functions** script interactions and assertions — **arrange, act, and assert** all within a single story . **Portable stories** allow reusing stories in Vitest, Jest, and Playwright Component Tests . **The reference implementation for component-driven development** .
-
-
-
-- **[MSW (Mock Service Worker)](https://github.com/mswjs/msw)**  
-
-  **API mocking library that intercepts requests at the network level** (MIT) . **The standard for component testing with API dependencies** — **same mocks work in browser, Node.js, and tests** . **Intercepts requests via Service Worker** in the browser and **via @mswjs/interceptors** in Node.js . **Don't mock `fetch` directly** — MSW lets your code under test run unchanged . **Set `onUnhandledRequest: 'error'`** — any unmocked request fails loudly instead of silently making real network calls .
-
-
-
-- **[WebdriverIO](https://github.com/webdriverio/webdriverio)**  
-
-  **Next-gen browser and mobile automation test framework for Node.js** (MIT) . **The most flexible Node.js automation framework** — **supports both WebDriver and Chrome DevTools Protocol** . **Best for**: teams needing WebDriver standard compatibility, mobile automation, and service-level API testing in a unified layer .
-
-
-
-- **[TestCafe](https://github.com/DevExpress/testcafe)**  
-
-  **A Node.js tool to automate end-to-end web testing** (MIT) . **The simplest setup** among Node.js testing frameworks — **no WebDriver required** . **Best for**: small teams, basic web regression, and quick startup where advanced scenarios are limited .
-
-
-
-- **[Safetest](https://github.com/kolodny/safetest)**  
-
-  **A test framework for testing complex React applications** (MIT) . **The most powerful approach for testing complex scenarios** — **uses Playwright and Jest together**, allowing tests to run in a real browser while accessing application internals . **Bootstrapped with your application** — no need to rewrap components in providers and contexts . **Handles authentication natively** — generate cookies in setup and all tests are authenticated . **Guiding principle**: "make any test possible, no matter how complex or involved" .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **[Enzyme (Legacy)](https://github.com/enzymejs/enzyme)** — JavaScript Testing utilities for React (MIT) . **Deprecated and incompatible with React 18+** — **shallow rendering and implementation-detail testing are no longer recommended** . **Migrate to React Testing Library** .
-
-- **[react-test-renderer](https://github.com/facebook/react)** — React renderer for snapshot testing (MIT) . **Superseded by Testing Library** for most use cases .
-
-- **[jest-axe](https://github.com/nickcolley/jest-axe)** — Accessibility testing with axe-core (MIT) . **Run axe in component tests for every interactive component** — catches missing labels, invalid ARIA, missing alt text .
-
-- **[vitest-axe](https://github.com/chaance/vitest-axe)** — Accessibility testing for Vitest (MIT) . **The Vitest companion to jest-axe** .
-
-- **[Cypress Testing Library](https://github.com/testing-library/cypress-testing-library)** — Testing Library queries for Cypress (MIT) . **Brings accessibility-first queries to Cypress** .
-
-- **[Playwright Testing Library](https://github.com/testing-library/playwright-testing-library)** — Testing Library queries for Playwright (MIT) . **Brings accessibility-first queries to Playwright** .
-
-- **[Storybook Test Runner](https://github.com/storybookjs/test-runner)** — Test runner for Storybook stories (MIT) . **Runs stories as tests in CI** .
-
-- Community **n8n** workflows for visual regression alerting and component test report routing.
-
-
-
-**Frameworks for building custom systems**: Combine **React Testing Library** for user-centric component logic with **Cypress** or **Playwright** for real-browser verification, **Storybook** for component documentation and interaction testing, **MSW** for API mocking, and **jest-axe** for accessibility validation—creating a comprehensive component testing platform.
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Component testing libraries handling UI code must follow security best practices and avoid committing test credentials to version control.
-
-- **Open-source component testing is mature and production-ready.** React Testing Library is the community standard for user-centric testing . Cypress and Playwright provide real-browser verification that catches CSS and layout bugs jsdom misses . **These are genuine alternatives to commercial platforms.**
-
-- **The philosophical shift from Enzyme to Testing Library is complete.** Enzyme encouraged testing implementation details (state variables, class names); React Testing Library tests user behavior . **Tests that access internal state break on refactoring; tests that verify visible output survive** .
-
-- **jsdom has fundamental limitations.** It cannot render real layout (flexbox, grid, viewport queries), run native browser animation, test scrolling behavior, or handle iframes and popups . **For any of those, use Playwright or Cypress Component Testing** .
-
-- **The decision boundary is clear.** A hook, a presentational component, or a form with logic → React Testing Library . A component whose layout matters or that uses browser APIs → Playwright or Cypress Component Testing . **Choose based on what you're actually testing, not familiarity** .
-
-- **Cypress vs. Playwright: the trade-off is maturity vs. throughput.** Cypress has the most mature component testing workflow with live visual preview and time-travel debugging . Playwright offers parallel execution across workers by default, keeping the inner loop tight . **Cypress for debugging experience; Playwright for speed** .
-
-- Self-hosted open-source solutions require proper CI/CD integration and browser installation. **Tests are code**—they belong in version control with the components they test.
-
-
+</div>
 
 ---
 
+## 📑 Table of Contents
+- [📖 Sector Overview & Market Dynamics](#-sector-overview--market-dynamics)
+- [☁️ SaaS & Hosted Platforms](#️-saas--hosted-platforms)
+- [🐙 Open-Source GitHub Projects](#-open-source-github-projects)
+- [🧩 Framework Synergy & Architecture Guide](#-framework-synergy--architecture-guide)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support](#-support)
+- [📈 Star History](#-star-history)
+- [⚖️ Disclaimer](#️-disclaimer)
 
+---
 
-**Made for frontend developers, QA engineers, and organizations building transparent component testing solutions.**  
+## 📖 Sector Overview & Market Dynamics
 
-Let's make Component Testing Libraries more open, data-driven, and user-centric.
+The global automated software testing and visual UI regression sector represents an estimated addressable market of **$28 billion to $35 billion by 2026** (expanding at an ~18% CAGR), driven by continuous delivery pipelines, micro-frontends, and component design systems. The market is **moderately fragmented yet bifurcated**: core execution and test runners are dominated by open-source standards (Playwright, Cypress, Vitest, Testing Library), whereas specialized cloud-hosted infrastructure—such as multi-browser visual AI diffing and distributed cloud test grids—is concentrated among dominant infrastructure players like BrowserStack (Percy) and Applitools.
+
+---
+
+## ☁️ SaaS & Hosted Platforms
+
+| SaaS Product 🛠️ | Company Size / Valuation 🏢 | Pricing (Starting Tier) 💵 | Free Tier / Free Trial Limits 🎁 | Description 📝 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Percy](https://percy.io/)** | **BrowserStack** (Valuation: ~$4.0B+, Revenue: ~$250M+ ARR) | **$99/month** (Desktop plan) | **5,000 free screenshots/month** with unlimited team members on Free plan | Visual testing and review platform for web apps and component libraries. Captures DOM snapshots and renders pixel-perfect visual diffs across browsers. |
+| **[Chromatic](https://www.chromatic.com/)** | **Storybook / Chromatic Inc.** (Valuation: ~$150M - $250M, Series A/Growth) | **$149/month** (Starter plan) | **5,000 free snapshots/month** forever + unlimited snapshots for public open-source repos | Automated visual regression testing, UI review workflows, and component publishing purpose-built for Storybook and Figma setups. |
+| **[Applitools](https://applitools.com/)** | **Applitools Ltd.** (Valuation: ~$100M - $150M / ~$35M+ ARR) | **$90/month** (Starter tier) | **100 free visual checkpoints/month** forever on the Free Starter plan (or 14-day Enterprise Trial with 1,000 checkpoints) | Enterprise visual AI testing platform using computer vision and machine learning to validate visual regressions without fragile DOM noise. |
+
+---
+
+## 🐙 Open-Source GitHub Projects
+
+The premier open-source libraries for component testing, unit isolation, accessibility audits, and real-browser rendering, sorted by community adoption (GitHub star counts descending):
+
+| Repository 📦 | Stars ⭐ | Primary Focus 🎯 | License 📜 | Description 📝 |
+| :--- | :---: | :--- | :---: | :--- |
+| **[Playwright](https://github.com/microsoft/playwright)** | [![Stars](https://img.shields.io/github/stars/microsoft/playwright?style=social&color=white)](https://github.com/microsoft/playwright/stargazers) | Real-Browser Component & E2E Testing | Apache-2.0 | High-velocity component testing for React, Vue, Svelte, and solid components in Chromium, Firefox, and WebKit with native parallel processes and timeline traces. |
+| **[Storybook](https://github.com/storybookjs/storybook)** | [![Stars](https://img.shields.io/github/stars/storybookjs/storybook?style=social&color=white)](https://github.com/storybookjs/storybook/stargazers) | Isolated Component Workshop & Testing | MIT | Industry-standard frontend workshop for developing UI components in isolation, featuring interaction tests via `play` functions and portable stories. |
+| **[Cypress](https://github.com/cypress-io/cypress)** | [![Stars](https://img.shields.io/github/stars/cypress-io/cypress?style=social&color=white)](https://github.com/cypress-io/cypress/stargazers) | Real-Browser Component Runner | MIT | Mature real-browser component testing mounting JSX/SFC components inside Chromium, Firefox, or Electron with live time-travel debugging. |
+| **[Jest](https://github.com/jestjs/jest)** | [![Stars](https://img.shields.io/github/stars/jestjs/jest?style=social&color=white)](https://github.com/jestjs/jest/stargazers) | Universal Test Runner & Snapshots | MIT | Delightful JavaScript testing framework featuring snapshot testing, parallel worker execution, flexible mocking utilities, and jsdom runtime integration. |
+| **[Enzyme (Legacy)](https://github.com/enzymejs/enzyme)** | [![Stars](https://img.shields.io/github/stars/enzymejs/enzyme?style=social&color=white)](https://github.com/enzymejs/enzyme/stargazers) | Legacy React Component Testing | MIT | Historical JavaScript testing utility for React (deprecated; incompatible with React 18+; recommended to migrate to React Testing Library). |
+| **[React Testing Library](https://github.com/testing-library/react-testing-library)** | [![Stars](https://img.shields.io/github/stars/testing-library/react-testing-library?style=social&color=white)](https://github.com/testing-library/react-testing-library/stargazers) | User-Centric React DOM Assertions | MIT | Gold-standard React component testing library built around the guiding principle: "The more your tests resemble the way your software is used, the more confidence they give you." |
+| **[MSW (Mock Service Worker)](https://github.com/mswjs/msw)** | [![Stars](https://img.shields.io/github/stars/mswjs/msw?style=social&color=white)](https://github.com/mswjs/msw/stargazers) | Network-Level API Mocking | MIT | Seamless API mocking via Service Workers in browsers and Node.js interceptors, ensuring components execute real un-mocked HTTP fetch/XHR flows. |
+| **[Vitest](https://github.com/vitest-dev/vitest)** | [![Stars](https://img.shields.io/github/stars/vitest-dev/vitest?style=social&color=white)](https://github.com/vitest-dev/vitest/stargazers) | Vite-Native Test Runner & Browser Mode | MIT | Blazing-fast Vite-native testing framework with out-of-the-box ESM, TypeScript, HMR, Jest-compatible APIs, and headless browser mode. |
+| **[WebdriverIO](https://github.com/webdriverio/webdriverio)** | [![Stars](https://img.shields.io/github/stars/webdriverio/webdriverio?style=social&color=white)](https://github.com/webdriverio/webdriverio/stargazers) | Next-Gen Browser & Mobile Automation | MIT | Flexible automation test framework supporting W3C WebDriver, Chrome DevTools Protocol, and native mobile testing for component suites. |
+| **[TestCafe](https://github.com/DevExpress/testcafe)** | [![Stars](https://img.shields.io/github/stars/DevExpress/testcafe?style=social&color=white)](https://github.com/DevExpress/testcafe/stargazers) | Zero-Config Node.js Browser Testing | MIT | Node.js web testing tool requiring zero WebDriver installations or browser plugins, providing built-in smart waits and selector helpers. |
+| **[Testing Library (DOM Core)](https://github.com/testing-library/dom-testing-library)** | [![Stars](https://img.shields.io/github/stars/testing-library/dom-testing-library?style=social&color=white)](https://github.com/testing-library/dom-testing-library/stargazers) | Accessible DOM Queries Core | MIT | The foundation of the Testing Library family, offering accessibility-driven queries (`getByRole`, `getByLabelText`, `getByText`) mirroring assistive technologies. |
+| **[jest-dom](https://github.com/testing-library/jest-dom)** | [![Stars](https://img.shields.io/github/stars/testing-library/jest-dom?style=social&color=white)](https://github.com/testing-library/jest-dom/stargazers) | Semantic DOM Matchers | MIT | Custom Jest & Vitest matchers (`toBeInTheDocument`, `toBeVisible`, `toBeDisabled`) that make UI test assertions readable, concise, and declarative. |
+| **[user-event](https://github.com/testing-library/user-event)** | [![Stars](https://img.shields.io/github/stars/testing-library/user-event?style=social&color=white)](https://github.com/testing-library/user-event/stargazers) | Realistic User Interaction Simulation | MIT | Simulates realistic browser interactions dispatching sequential events (`pointerdown`, `focus`, `keydown`, `click`) rather than synthetic triggers. |
+| **[Cypress Testing Library](https://github.com/testing-library/cypress-testing-library)** | [![Stars](https://img.shields.io/github/stars/testing-library/cypress-testing-library?style=social&color=white)](https://github.com/testing-library/cypress-testing-library/stargazers) | Testing Library Queries in Cypress | MIT | Enhances Cypress with user-centric `cy.findByRole()`, `cy.findByLabelText()` queries, unifying testing philosophy across unit and E2E suites. |
+| **[Safetest](https://github.com/kolodny/safetest)** | [![Stars](https://img.shields.io/github/stars/kolodny/safetest?style=social&color=white)](https://github.com/kolodny/safetest/stargazers) | Full-App Component Testing | MIT | Unifies Playwright and Jest/Vitest to test complex React applications in real browsers while retaining direct programmatic access to application states. |
+| **[jest-axe](https://github.com/nickcolley/jest-axe)** | [![Stars](https://img.shields.io/github/stars/nickcolley/jest-axe?style=social&color=white)](https://github.com/nickcolley/jest-axe/stargazers) | Automated a11y Testing for Jest | MIT | Integrates Deque's `axe-core` accessibility engine into Jest to automatically detect ARIA violations, missing labels, and contrast defects in components. |
+| **[Storybook Test Runner](https://github.com/storybookjs/test-runner)** | [![Stars](https://img.shields.io/github/stars/storybookjs/test-runner?style=social&color=white)](https://github.com/storybookjs/test-runner/stargazers) | CI Storybook Assertion Runner | MIT | Standalone test runner powered by Playwright that executes interaction tests and a11y validations across all Storybook stories in CI environments. |
+| **[Playwright Testing Library](https://github.com/testing-library/playwright-testing-library)** | [![Stars](https://img.shields.io/github/stars/testing-library/playwright-testing-library?style=social&color=white)](https://github.com/testing-library/playwright-testing-library/stargazers) | Testing Library Queries in Playwright | MIT | Extensions adding accessibility-first DOM query locators to Playwright browser sessions and component fixtures. |
+| **[vitest-axe](https://github.com/chaance/vitest-axe)** | [![Stars](https://img.shields.io/github/stars/chaance/vitest-axe?style=social&color=white)](https://github.com/chaance/vitest-axe/stargazers) | Automated a11y Testing for Vitest | MIT | Clean Vitest wrapper around `axe-core` matchers for streamlined accessibility regression testing in Vite ecosystems. |
+
+---
+
+## 🧩 Framework Synergy & Architecture Guide
+
+Building an enterprise-ready UI component test matrix typically combines complementary open-source and hosted tools:
+
+```
+[ Component Isolation & Stories ]  ──>  Storybook
+[ Fast DOM Unit Assertions ]       ──>  React Testing Library + vitest / jest + jest-dom
+[ Real-Browser Layout & CSS ]      ──>  Playwright Component Testing / Cypress Mount
+[ Network Isolation & Mocks ]      ──>  MSW (Mock Service Worker)
+[ Accessibility Guardrails ]       ──>  jest-axe / vitest-axe
+[ Cross-Browser Visual Diffs ]     ──>  Percy / Chromatic / Applitools
+```
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are wholeheartedly welcome! ✨
+
+1. 🍴 Fork the repository.
+2. 🌿 Create a descriptive branch: `git checkout -b add-new-testing-lib`.
+3. 📝 Add or edit entries in `README.md` maintaining the sorting, tabular format, specific pricing, and badge conventions.
+4. 🚀 Open a Pull Request with a clear description of the library and its role in frontend testing.
+
+---
+
+## 💖 Support
+
+Thank you for exploring this curated repository! If you find this project valuable for your testing workflows, please consider showing your support:
+
+- ⭐ **Star this repository** to help other frontend and QA engineers discover it.
+- 🍴 **Fork and contribute** your favorite component testing patterns and tools.
+- 📢 **Share with peers** across social channels, Discord, and engineering teams.
+- ☕ **Buy me a coffee**: If you'd like to sponsor the ongoing curation of this and other open-source developer lists, visit the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Component-Testing-Libraries&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Component-Testing-Libraries&type=date&legend=top-left)
+
+---
+
+## ⚖️ Disclaimer
+
+- This is a community-curated collection intended for educational and engineering benchmarking purposes; inclusion does not constitute commercial endorsement.
+- All trademarks, logos, and brand names belong to their respective owners.
+- When configuring automated testing pipelines, ensure test suites adhere to security best practices and never expose production secrets or authentication keys in test mock files.
+
+---
+
+<div align="center">
+  <sub>Crafted with care for frontend developers, QA engineers, and open-source contributors worldwide. 🌍💻</sub>
+</div>
